@@ -224,7 +224,7 @@ div#sticky_navigation{
 /* Give a fork logo */
 #give-a-fork{ /* Hidden on all pages, but... */
 	background: url('/wp-content/themes/charitas-child/images/fork.svg') no-repeat;
-	background-size:75% auto;
+	background-size: 50% auto;
 	background-position:50% 50%;
 	display:none;
 }
@@ -236,22 +236,20 @@ div#sticky_navigation{
 #nav-container{
 	margin-top:1px; /* Fixes FF Nav moving right */
 }
+
 .page-template-template-home-page-php #branding{
 	min-height:225px;
 }
+
 #branding nav{
 	float:none;
 }
-nav ul.nav-menu li a{
-	text-transform:capitalize;
-}
-nav ul.nav-menu li a:hover{
-	text-decoration:none
-}
+
 nav ul.nav-menu{
 	text-align:center;
 	padding:0;
 }
+
 nav ul.nav-menu{
 	border:1px solid #fff;
 	display: table;
@@ -262,18 +260,26 @@ nav ul.nav-menu{
     -ms-box-sizing: border-box;
     box-sizing: border-box;
 }
+
 nav ul.nav-menu li{
 	display: table-cell;
 	vertical-align:middle;
 	width:16%;
 	line-height:2.25;
 	height:54px;
+	/*CSS3 Transition*/
+	-webkit-transition: all 300ms ease-in-out;
+	-moz-transition: all 300ms ease-in-out;
+	-ms-transition: all 300ms ease-in-out;
+	-o-transition: all 300ms ease-in-out;
+	transition: all 300ms ease-in-out;
 }
-nav ul.nav-menu li:hover, nav ul.nav-menu li.current-menu-item{
+
+nav ul.nav-menu li a:hover, nav ul.nav-menu li.current-menu-item a{
 	background:#f0e9e1;
 	color:#a54b10;
 }
-nav ul.nav-menu li:hover{
+nav ul.nav-menu li a:hover{
 	background:#fff;
 }
 nav ul.nav-menu li a{
@@ -288,6 +294,14 @@ nav ul.nav-menu li a{
 }
 #menu-main-menu li:hover a, nav ul.nav-menu li.current-menu-item a{
 	color:#a54b10 !important
+}
+
+nav ul.nav-menu li a{
+	text-transform:capitalize;
+}
+
+nav ul.nav-menu li a:hover{
+	text-decoration:none
 }
 
 /* Widget */
@@ -372,7 +386,7 @@ div.short-description p a.vimeo{
 	color:#fff;
 	margin-bottom:0.8em
 }
-div.inner-hp a, div.inner-hp a:hover, div.inner-hp a:visited,  a.buttonish:link, a.buttonish:visited,  a.buttonish:hover{
+div.inner-hp a, a.buttonish:link{
 	border:1px solid #a54b10;
 	text-transform:uppercase;
 	background:#a54b10;
@@ -380,11 +394,21 @@ div.inner-hp a, div.inner-hp a:hover, div.inner-hp a:visited,  a.buttonish:link,
 	color:#fff;
 	font-size:1.14em;
 	text-decoration:none;
+	/*CSS3 Transition*/
+	-webkit-transition: all 300ms ease-in-out;
+	-moz-transition: all 300ms ease-in-out;
+	-ms-transition: all 300ms ease-in-out;
+	-o-transition: all 300ms ease-in-out;
+	transition: all 300ms ease-in-out;
 }
-div.inner-hp a:hover{
+
+/*a.buttonish:hover , div.inner-hp a:visited,  a.buttonish:visited */
+
+div.inner-hp a:hover, div.inner-hp a:active, div.inner-hp a:focus{
 	background:#fff;
 	color:#a54b10;
 }
+
 a.buttonish:hover{
 	background:#f0e9e1;
 	color:#a54b10;
@@ -422,16 +446,27 @@ a.buttonish:hover{
 
 /* Page Title/Header */
 .teaser-page-list{
-	background:url('images/paperboard.png');
-	border-bottom:1px solid #e6dcd3;
+	background: url('images/paperboard.png');
+	min-height: inherit;
 }
+
+@media (min-width: 768px) {
+	/*Turn off big header for large screens*/
+	.teaser-page-list{
+		display: none;
+	}
+}
+
 .container_16 .grid_10{
 	width:98%;
 	text-align:center;
 }
+
 .teaser-page-list .page-title{
-	margin:20px 0;
+	margin-top:12px;
+	margin-bottom:20px;
 }
+
 h1.page-title{
 	color:#765129;
 	border:0;
@@ -853,7 +888,7 @@ div.ai1ec-calendar-toolbar{
 		width:48%;
 	}
 }
-@media (max-width: 768px) { /* When meanmenu appears */
+@media (max-width: 768px) { /* When mobmenu appears */
 	#sup-time, #sup-contact{
 		display:none;
 	}
@@ -864,11 +899,9 @@ div.ai1ec-calendar-toolbar{
 		min-height:76px;
 	}
 	.page-title{
-		font-size:3.5em;
+		font-size:2.571428em;
 	}
-	.teaser-page-list .grid_10 .page-title{
-		margin:0;
-	}
+
 	/* Footer */
 	#nav_menu-4{
 		left:0;
@@ -899,12 +932,7 @@ div.ai1ec-calendar-toolbar{
 }
 @media (min-width: 1200px) {
 	.page-title {
-		font-size:6em;
-	}
-}
-@media (max-width: 1200px) {
-	.page-title {
-		font-size:6em;
+		font-size:4em;
 	}
 }
 .mean-container{
