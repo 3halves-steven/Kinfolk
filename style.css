@@ -948,6 +948,10 @@ div.ai1ec-calendar-toolbar{
 	.page-title{
 		font-size:2.571428em;
 	}
+	/* 404 search bar */
+	.single-404 form{
+		width:98%;
+	}
 
 	/* Footer */
 	#nav_menu-4{
