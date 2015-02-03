@@ -105,7 +105,13 @@ a:hover, a:active, a:focus{
 }
 
 /* Join Mailing List */
-input.wysija-input {
+.mc4wp-form{
+	margin:0;
+}
+.mc4wp-form p{
+	margin-bottom:0;
+}
+.mc4wp-form input{
 	width:236px;
 	height:38px;
 	margin-top:6px;
@@ -113,20 +119,11 @@ input.wysija-input {
 	font-family: 'Yanone Kaffeesatz', sans-serif;
 	font-weight:300;
 	font-size:1.1em;
-	background:0;
-	-webkit-border-radius:0;
-	-moz-border-radius:0;
-	border-radius:0;
-	padding: 0 12px;
+	padding: 6px 12px;
 	border: 1px solid #b9afa6;
-	background-position:0;
-	background-repeat: no-repeat;
-	-webkit-background-size:0;
-	-moz-background-size:0;
-	background-size:0;
-	background-image:none;
+	background:none;
 }
-input.wysija-submit{
+.mc4wp-form input[type=submit]{
 	cursor:pointer;
 	border:1px solid #a54b10;
 	text-align:center;
@@ -137,33 +134,17 @@ input.wysija-submit{
 	font-size: 1.3em;
 	text-transform:uppercase;
 	padding: 0;
-	-webkit-border-radius:0;
-	-moz-border-radius:0;
-	border-radius:0;
 	border:0;
 	background:#a54b10;
+	margin-top:20px;
 }
-input.wysija-submit:hover{
+.mc4wp-form input[type=submit]:hover{
 	border:1px solid #a54b10;
 	color:#a54b10;
 	background:#f0e9e1;
 }
-#dd_mailing-list input.wysija-submit:hover{
+#dd_mailing-list .mc4wp-form input[type=submit]:hover{
 	background:#fff;
-}
-p.wysija-paragraph{
-	margin-bottom:0;
-}
-.widget_wysija_cont .updated{
-	font-family: 'Yanone Kaffeesatz', sans-serif;
-	font-size: 1.3em;
-}
-div.allmsgs{
-	margin-top:1em;
-}
-#dd_mailing-list p.wysija-paragraph .formError{
-	top:160px !important;
-	left:0 !important;
 }
 
 #big-map-canvas{

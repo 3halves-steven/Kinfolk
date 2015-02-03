@@ -74,8 +74,8 @@
 							<div id="map-canvas" style="width:360px;height:185px;margin-top:20px;min-height:185px;"></div>
 						</div>
 						<div id="dd_mailing-list" class="grid_4 push_1">
-							<h3>MAILING LIST</h3>
-							<?php echo do_shortcode('[wysija_form id="1"]'); ?>
+							<h3>Kinfolk Newsletter</h3>
+							<?php echo do_shortcode('[mc4wp_form]'); ?>
 						</div>
 						<div class="clear"></div>
 					</div>
