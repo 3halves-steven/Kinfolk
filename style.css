@@ -893,6 +893,24 @@ div.ai1ec-calendar-toolbar{
 /* Dropshadow removal */
 .timely .ai1ec-form-control,.timely .ai1ec-form-control:focus,.timely .ai1ec-has-warning .ai1ec-form-control,.timely .ai1ec-has-warning .ai1ec-form-control:focus,.timely .ai1ec-has-error .ai1ec-form-control,.timely .ai1ec-has-error .ai1ec-form-control:focus,.timely .ai1ec-has-success .ai1ec-form-control,.timely .ai1ec-has-success .ai1ec-form-control:focus,.timely .ai1ec-btn:active,.timely .ai1ec-btn.ai1ec-active,.ai1ec-dropdown-menu,.ai1ec-btn-group.ai1ec-open .ai1ec-dropdown-toggle,.ai1ec-well,.ai1ec-modal-content,.ai1ec-modal-content,.ai1ec-popover,.select2-drop,.select2-drop.select2-drop-above,.sel.select2-container-active .select2-choice,.select2-container-active .select2-choices,.select2-dropdown-open .select2-choice,.select2-container-multi.select2-container-active .select2-choices,.select2-container-multi .select2-choices .select2-search-choice,#ai1ec-event-modal .ai1ec-category,#ai1ec-event-modal .ai1ec-tag,#ai1ec-event-modal .ai1ec-category:hover,#ai1ec-event-modal .ai1ec-tag:hover,.select2-container-multi .select2-choices,.ai1ec-category,.ai1ec-category:hover,.ai1ec-active > .ai1ec-category,a.ai1ec-custom-filter,.ai1ec-tag:hover,.ai1ec-active > .ai1ec-tag,.ai1ec-event-avatar,.ai1ec-agenda-widget-view .ai1ec-date-title,.ai1ec-agenda-view .ai1ec-date-title,.ai1ec-agenda-widget-view .ai1ec-year,.ai1ec-agenda-view .ai1ec-year,.ai1ec-calendar-toolbar.ai1ec-affix,.ai1ec-week-view .ai1ec-now-marker,.ai1ec-oneday-view .ai1ec-now-marker,.ai1ec-week-view .ai1ec-now-marker div,.ai1ec-oneday-view .ai1ec-now-marker div,.ai1ec-week-view .ai1ec-week a.ai1ec-event-container,.ai1ec-oneday-view .ai1ec-oneday a.ai1ec-event-container,.ai1ec-agenda-view .ai1ec-event.ai1ec-expanded,.ai1ec-posterboard-view .ai1ec-event-wrap,.ai1ec-posterboard-view .ai1ec-event .post-edit-link,.ai1ec-posterboard-view footer,.ai1ec-stream-view .ai1ec-event{-webkit-box-shadow:none;-moz-box-shadow:none;box-shadow:none;}
 
+/* 404 styling */
+.teaser-page-404{
+	background:#fff;
+}
+.teaser-page-404 h2{
+	font-size:2.5em;
+	color:#807066 !important;
+	margin-top:0;
+}
+.single-404 .button{
+	font-size:1.6em;
+}
+.single-404 form{
+	width: 23%; /* as grid_4 */
+	margin-left: auto;
+	margin-right: auto;
+}
+
 /* Structural Mobile */
 @media (min-width: 768px) { /* Before meanmenu appears */
 	nav ul.nav-menu li.menu-item-444, #colophon .widget ul li.menu-item-445{
