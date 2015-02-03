@@ -16,10 +16,12 @@ body{
 	font-family:'Yanone Kaffeesatz', sans-serif;
 	color:#807066
 }
-
 p{
 	font-family:'Yanone Kaffeesatz', sans-serif;
 	font-size:1.6em;
+}
+input, textarea{
+	font-family:'Yanone Kaffeesatz', sans-serif;
 }
 h1{
 	font-family:'Yanone Kaffeesatz', sans-serif;
@@ -248,10 +250,6 @@ div#sticky_navigation{
 	min-height:225px;
 }
 
-#branding nav{
-	float:none;
-}
-
 nav ul.nav-menu{
 	text-align:center;
 	padding:0;
@@ -273,7 +271,15 @@ nav ul.nav-menu li{
 	vertical-align:middle;
 	width:16%;
 	line-height:2.25;
-	height:54px;
+}
+
+nav ul.nav-menu li a{
+	color:#fff;
+	font-size:1.7em;
+	font-family:'Yanone Kaffeesatz', sans-serif;
+	font-weight:normal;
+	text-transform:capitalize;
+	text-decoration:none;
 	/*CSS3 Transition*/
 	-webkit-transition: all 200ms ease-in-out;
 	-moz-transition: all 200ms ease-in-out;
@@ -282,34 +288,20 @@ nav ul.nav-menu li{
 	transition: all 200ms ease-in-out;
 }
 
-nav ul.nav-menu li a:hover, nav ul.nav-menu li.current-menu-item a{
+nav ul.nav-menu li a:hover, nav ul.nav-menu li a:active, nav ul.nav-menu li a:focus{
+	background:#fff;
+	color:#a54b10;
+}
+
+nav ul.nav-menu li.current-menu-item a{
 	background:#f0e9e1;
 	color:#a54b10;
 }
-nav ul.nav-menu li a:hover{
-	background:#fff;
-}
-nav ul.nav-menu li a{
-	color:#000;
-	font-size:1.7em;
-	font-family:'Yanone Kaffeesatz', sans-serif;
-	font-weight:normal;
-}
 
-nav ul.nav-menu li a{
-	color:#fff !important
-}
-#menu-main-menu li:hover a, nav ul.nav-menu li.current-menu-item a{
+/*#menu-main-menu li:hover a, nav ul.nav-menu li.current-menu-item a{
 	color:#a54b10 !important
 }
-
-nav ul.nav-menu li a{
-	text-transform:capitalize;
-}
-
-nav ul.nav-menu li a:hover{
-	text-decoration:none
-}
+*/
 
 /* Widget */
 .widget-title{
@@ -469,7 +461,8 @@ a.buttonish:hover{
 	text-align:center;
 }
 
-.teaser-page-list .page-title{
+.teaser-page-list .grid_10 .page-title, 
+.teaser-page .grid_10 .page-title{
 	margin-top:12px;
 	margin-bottom:20px;
 }
@@ -824,8 +817,8 @@ div#search-container{
 /* Back to top, breadcrumbs, child_menu*/
 .back-bread{
 	text-align:left;
-	padding:1.8em 0;
-	font-size:1.6em;
+	padding:1em 0;
+	font-size:1.4em;
 	color:#807066;
 }
 .btt{
@@ -895,7 +888,7 @@ div.ai1ec-calendar-toolbar{
 		width:48%;
 	}
 }
-@media (max-width: 768px) { /* When mobmenu appears */
+@media (max-width: 768px) { /* When meanmenu appears */
 	#sup-time, #sup-contact{
 		display:none;
 	}
