@@ -14,11 +14,11 @@ Version: 1.0.0.
 }	
 body{
 	font-family:'Yanone Kaffeesatz', sans-serif;
-	color:#807066
+	color:#807066;
 }
 p{
 	font-family:'Yanone Kaffeesatz', sans-serif;
-	font-size:1.6em;
+	font-size:1.5em;
 }
 input, textarea{
 	font-family:'Yanone Kaffeesatz', sans-serif;
@@ -45,14 +45,25 @@ h4, h2.widget-title, .widget-title h3{
 	font-weight:700;
 	font-size:2em;
 	color:#807066;
+	line-height: 1.1;
 }
-a, a:hover{
+
+a, a:link, a:visited{
 	color:#a54b10;
-	text-decoration:none
+	text-decoration:none;
+	/*CSS3 Transition*/
+	-webkit-transition: all 100ms ease-in-out;
+	-moz-transition: all 100ms ease-in-out;
+	-ms-transition: all 100ms ease-in-out;
+	-o-transition: all 100ms ease-in-out;
+	transition: all 100ms ease-in-out;
 }
-a:hover{
-	text-decoration:underline
+
+a:hover, a:active, a:focus{
+	color: #cc590c;
+	text-decoration:none;
 }
+
 .entry-content blockquote{
 	border-left:10px solid #e0d5cf;
 	font-style:normal;
@@ -88,6 +99,11 @@ a:hover{
 #ddw p strong{
 	font-weight:normal;
 }
+/* Main template padding */
+#main .inner{
+	padding: 0 0 95px 0;
+}
+
 /* Join Mailing List */
 input.wysija-input {
 	width:236px;
@@ -298,14 +314,33 @@ nav ul.nav-menu li.current-menu-item a{
 	color:#a54b10;
 }
 
-/*#menu-main-menu li:hover a, nav ul.nav-menu li.current-menu-item a{
-	color:#a54b10 !important
+/* Sidenav */
+#secondary #child-page-list .widget-title{
+	outline: 1px solid #c6bfbb;
+	border: 2px solid white;
+	background-color: #faf7f5;
+	padding: 0.15em 0.25em;
+	font-weight: 400;
+	margin-top:1em;
 }
-*/
+#secondary #child-page-list ul{
+	margin-left: 0;
+	margin-top: 1em;
+	margin-bottom: 4em;
+	padding: 0 0 1em 0.75em ;
+	border-bottom: 1px solid #c6bfbb;
+}
+
+#secondary #child-page-list ul li a{
+	font-weight: 400;
+}
+
+
 
 /* Widget */
 .widget-title{
-	background:none
+	background: transparent none;
+	margin-bottom: 0.15em;
 }
 .grid_4 .widget-causes-body .cause-item{
 	border:0
@@ -380,13 +415,22 @@ div.short-description p a.vimeo{
 	position:relative;
 	top:48%;
 	transform: translateY(-48%);
+	padding: 0 12%;
 }
+
+@media (min-width: 600px){
+		.inner-hp{
+			padding: 0 20%;
+	}
+}
+
 .inner-hp h3{
 	color:#fff;
-	margin-bottom:0.8em
+	margin-bottom:0.8em;
+	line-height: 1.1;
+
 }
 div.inner-hp a, a.buttonish:link{
-	border:1px solid #a54b10;
 	text-transform:uppercase;
 	background:#a54b10;
 	padding:0.5em 0.75em;
@@ -400,8 +444,6 @@ div.inner-hp a, a.buttonish:link{
 	-o-transition: all 300ms ease-in-out;
 	transition: all 300ms ease-in-out;
 }
-
-/*a.buttonish:hover , div.inner-hp a:visited,  a.buttonish:visited */
 
 div.inner-hp a:hover, div.inner-hp a:active, div.inner-hp a:focus{
 	background:#fff;
@@ -660,23 +702,16 @@ footer#colophon {
 footer div.textwidget{
 	color:#807066 !important;
 	font-family:'Yanone Kaffeesatz', sans-serif;
-	font-size:1.6em
+	font-size:1.285714em
 }
 #colophon .widget h3{
 	color:#000;
 	margin-top:40px;
 	margin-bottom:5px;
 	text-transform:uppercase;
-	font-size:1.7em;
+	font-size:1.5em;
 	font-family:'Yanone Kaffeesatz', sans-serif;
 	font-weight:normal
-}
-a:link, a:hover, a:visited{
-	color:#a54b10;
-	text-decoration:none
-}
-a:hover{
-	text-decoration:underline
 }
 .down-arrow,.up-arrow{
 	width:0;
@@ -698,11 +733,11 @@ a:hover{
 	top:14px;
 }
 #the-ba{
-	width:30px;
-	height:15px;
+	width:32px;
+	height:17px;
 	margin-left:auto;
 	margin-right:auto;
-	background:url('images/brown-arrow.png') no-repeat center center;
+	background:url('images/brown-arrow.png') no-repeat bottom center;
 }
 .header-tri img{
 	margin-bottom:-6px
@@ -749,7 +784,7 @@ div#search-container{
     line-height: 30px;
 }
 #colophon .widget ul li:hover a, #colophon .widget ul li a:hover{
-	color:#a44b13	
+	color:#cc590c;	
 }
 #colophon .widget ul li:hover{
 	-webkit-animation-name:none;
@@ -808,10 +843,7 @@ div#search-container{
 }
 #colophon .widget ul li a{
 	color:#a44b13;
-	font-size:20px;
-}
-#colophon .widget ul li a:hover{
-	text-decoration:underline;
+	font-size: 1.285714em;
 }
 
 /* Back to top, breadcrumbs, child_menu*/
@@ -823,9 +855,6 @@ div#search-container{
 }
 .btt{
 	padding-bottom:0;
-}
-.back-bread a,.back-bread a:hover,.back-bread a:visited{
-	color:#a54b10;
 }
 .btt a:before{
 	display: inline-block;
@@ -973,12 +1002,18 @@ div.ai1ec-calendar-toolbar{
 	width:320px;
 	height:210px;
 	padding:20px;
-	opacity:0.75;
+	opacity:1;
 	display:inline-flex;
 	margin:.5em .5em 0 0;
+	/*CSS3 Transition*/
+	-webkit-transition: all 100ms ease-in-out;
+	-moz-transition: all 100ms ease-in-out;
+	-ms-transition: all 100ms ease-in-out;
+	-o-transition: all 100ms ease-in-out;
+	transition: all 100ms ease-in-out;
 }
 .menu-image-link-container:hover,.menu-image-link-container:active{
-	opacity:1;
+	opacity:0.75;
 	cursor: hand;
 	cursor: pointer;
 }
@@ -1239,7 +1274,8 @@ only screen and (                min-resolution: 2dppx)  and (min-width: 1300px)
 	
 	/* Paperboard */
 	.dropdownwrap, .page-template-template-home-page-php, .teaser-page-list, footer#colophon {
-		background:url('images/paperboard-2x.png');
+		background:#f0e9e1 url('images/paperboard-2x.png');
+		background-size: 25% 25%;
 	}
   
 	/* Header */
