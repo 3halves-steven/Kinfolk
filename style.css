@@ -224,9 +224,16 @@ div#sticky_navigation{
 /* Give a fork logo */
 #give-a-fork{ /* Hidden on all pages, but... */
 	background: url('/wp-content/themes/charitas-child/images/fork.svg') no-repeat;
-	background-size: 50% auto;
+	background-size: 75% auto;
 	background-position:50% 50%;
 	display:none;
+}
+
+@media (min-width:768px){
+	/*Make this smaller for big screens*/
+	#give-a-fork{
+		background-size: 50% auto;
+	}
 }
 .page-template-template-home-page-php #give-a-fork{ /* ...for homepage */
 	display:block;
@@ -268,11 +275,11 @@ nav ul.nav-menu li{
 	line-height:2.25;
 	height:54px;
 	/*CSS3 Transition*/
-	-webkit-transition: all 300ms ease-in-out;
-	-moz-transition: all 300ms ease-in-out;
-	-ms-transition: all 300ms ease-in-out;
-	-o-transition: all 300ms ease-in-out;
-	transition: all 300ms ease-in-out;
+	-webkit-transition: all 200ms ease-in-out;
+	-moz-transition: all 200ms ease-in-out;
+	-ms-transition: all 200ms ease-in-out;
+	-o-transition: all 200ms ease-in-out;
+	transition: all 200ms ease-in-out;
 }
 
 nav ul.nav-menu li a:hover, nav ul.nav-menu li.current-menu-item a{
