@@ -115,7 +115,7 @@
 								<h2 id="site-description"><?php bloginfo('description'); ?></h2>
 					</hgroup>*/ ?>
 
-					<nav role="navigation" class="site-navigation main-navigation grid_11" id="site-navigation">
+					<nav role="navigation" class="site-navigation main-navigation clearfix" id="site-navigation">
 						<?php wp_nav_menu( array('menu_class' => 'nav-menu',  'theme_location' => 'primary' )); ?>
 					</nav>
 					
