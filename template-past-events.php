@@ -12,7 +12,7 @@
 	<div class="item teaser-page-list">
 		<div class="container_16">
 			<aside class="grid_10">
-				<h1 class="page-title">sixteen <?php the_title(); ?></h1>
+				<h1 class="page-title"><?php the_title(); ?></h1>
 			</aside>
 			<div class="clear"></div>
 		</div>

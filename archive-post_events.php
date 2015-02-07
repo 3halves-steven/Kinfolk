@@ -14,7 +14,7 @@
 
 	<div class="container_16">
 		<aside class="grid_10">
-			<h1 class="page-title">one <?php _e('Events by category:', 'wplook'); ?> <?php single_cat_title(); ?></h1>
+			<h1 class="page-title"><?php _e('Events by category:', 'wplook'); ?> <?php single_cat_title(); ?></h1>
 		</aside>
 		<?php if ( ot_get_option('wpl_breadcrumbs') != "off") { ?>
 			<div class="grid_6">

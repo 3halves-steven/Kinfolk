@@ -24,7 +24,7 @@ $page_width = get_post_meta(get_the_ID(), 'wpl_sidebar_option', true);
 	
 		<div class="container_16">
 			<aside class="grid_10">
-				<h1 class="page-title">six <?php the_title() ?></h1>
+				<h1 class="page-title"><?php the_title() ?></h1>
 			</aside>
 			<div class="clear"></div>
 		</div>

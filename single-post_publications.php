@@ -21,7 +21,7 @@
 	
 		<div class="container_16">
 			<aside class="grid_10">
-				<h1 class="page-title">seven <?php the_title() ?></h1>
+				<h1 class="page-title"><?php the_title() ?></h1>
 			</aside>
 			<div class="clear"></div>
 		</div>

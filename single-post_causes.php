@@ -25,7 +25,7 @@ $donation_box_cause = get_post_meta(get_the_ID(), 'wpl_donation_box_cause', true
 	
 		<div class="container_16">
 			<aside class="grid_10">
-				<h1 class="page-title">three <?php the_title() ?></h1>
+				<h1 class="page-title"><?php the_title() ?></h1>
 			</aside>
 			<div class="clear"></div>
 		</div>
