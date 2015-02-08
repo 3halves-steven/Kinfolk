@@ -8,7 +8,7 @@ $(document).ready(function(e){
 	}
 	var window_height = $(window).height();
 				
-	var give_a_height = window_height - nav_height - logo_height;
+	var give_a_height = window_height - nav_height - logo_height + 5;
 	
 	$('.page-template-template-home-page-php #give-a-fork').css({'height':give_a_height});
 	

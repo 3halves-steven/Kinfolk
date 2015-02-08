@@ -157,8 +157,8 @@ if ( ! function_exists( 'wplook_breadcrumbs' ) ) {
 		} elseif ( is_single() && !is_attachment() ) {
 			if ( get_post_type() != 'post' ) {
 				$post_type = get_post_type_object(get_post_type());
-				$slug = $post_type->rewrite;
-				$slug = str_replace("/event","",$slug['slug']); /* --SM20150207 */
+				$og_slug = $post_type->rewrite;
+				$slug = str_replace("/event","",$og_slug['slug']); /* --SM20150207 */
 				$post_type_name = $post_type->labels->singular_name;
 								
 				$categories = wp_get_post_terms( get_the_ID(), 'events_categories' ); /* Loop adapted from plugin author http://pastebin.com/K9eBmDUJ --SM20150207 */
@@ -171,10 +171,27 @@ if ( ! function_exists( 'wplook_breadcrumbs' ) ) {
 						$cat_bread=' ' . $delimiter . ' <a href="' . $homeLink . '/' . $slug . '/cat_ids~'.$category->term_id.'/">' . esc_html( $category->name ) . '</a>'; */
 					}
 
-					echo '<a href="' . $homeLink . '/' . $slug . '/">' . $post_type_name . '</a>' . $cat_bread	;
+					$category_breadcrumbs = '<a href="' . $homeLink . '/' . $slug . '/">' . $post_type_name . '</a>' . $cat_bread	;
 									
 					break;
 				}
+				
+				if ($category_breadcrumbs == ""){
+					if($post_type->labels->singular_name = "Staff"){
+						$staff_category = wplook_custom_taxonomies_terms_links();
+						$pos = strpos($staff_category, "Suppliers");
+						
+						if ($pos !== false) {						
+							$category_breadcrumbs = '<a href="/food/supplier-stories/">Suppliers</a>';
+						}else{
+							$category_breadcrumbs = '<a href="/volunteer/#volunteers">Volunteers</a>';
+						}
+					}else{
+						$category_breadcrumbs = '<a href="' . $homeLink . '/' . $og_slug['slug'] . '/">' . $post_type->labels->singular_name . '</a>';
+					}
+				}
+								
+				echo $category_breadcrumbs;
 				
 				if ($showCurrent == 1) echo ' ' . $delimiter . ' ' . $before . get_the_title() . $after;
 			} else {

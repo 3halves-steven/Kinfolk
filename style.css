@@ -243,13 +243,17 @@ div#sticky_navigation{
 	margin-top:1px; /* Fixes FF Nav moving right */
 }
 
-.page-template-template-home-page-php #branding{
-	min-height:225px;
-}
-
 nav ul.nav-menu{
 	text-align:center;
 	padding:0;
+}
+
+.sub-menu{
+	display:none !important;
+}
+
+.nav-menu .current-menu-ancestor > a{
+	color:#fff;
 }
 
 nav ul.nav-menu{
@@ -478,6 +482,12 @@ a.buttonish:hover{
 		display: none;
 	}
 }
+@media (max-width: 768px) {
+	/*Turn off Supplier Stories for mobile*/
+	#post-471 h3{
+		display: none;
+	}
+}
 
 .container_16 .grid_10{
 	width:98%;
@@ -677,8 +687,11 @@ input.vfb-text:focus,input[type="text"].vfb-text:focus,input[type="tel"].vfb-tex
 	text-align:center;
 }
 footer#colophon {
-	background:url('images/paperboard.png');
+	background:0;
 	padding-top:0
+}
+#footer-widget-area, #colophon{
+	background:0;
 }
 footer div.textwidget{
 	color:#807066 !important;
@@ -1002,12 +1015,8 @@ div.ai1ec-calendar-toolbar{
 
 /* Catering / menu images / rollover */
 .menu-image-link-container{
-	width:320px;
-	height:210px;
 	padding:20px;
 	opacity:1;
-	display:inline-flex;
-	margin:.5em .5em 0 0;
 	/*CSS3 Transition*/
 	-webkit-transition: all 100ms ease-in-out;
 	-moz-transition: all 100ms ease-in-out;
@@ -1084,7 +1093,7 @@ div.ai1ec-calendar-toolbar{
 	}
 	/* Homepage images */
 	.outer-hp{
-		height:282px;
+		height:200px; /* 282 */
 	}
 	#our-food{
 		background:url('images/homepage/food-025x.jpg') no-repeat center center;
@@ -1106,6 +1115,15 @@ div.ai1ec-calendar-toolbar{
 		background:url('images/homepage/events-025x.jpg') no-repeat center center;
 		background-size:cover;
 	}
+	/* Rollover */
+	.menu-image-link-container{
+		width:210px;
+		height:124px;
+		display:block;
+		margin-left:auto;
+		margin-right:auto;
+		margin-top:.5em;
+	}
 
 }
 
@@ -1126,7 +1144,7 @@ only screen and (                min-resolution: 2dppx)  and (min-width: 320px) 
 	}
 	/* Homepage images */
 	.outer-hp{
-		height:282px;
+		height:200px; /* 282 */
 	}
 	#our-food{
 		background:url('images/homepage/food-05x.jpg') no-repeat center center;
@@ -1148,6 +1166,15 @@ only screen and (                min-resolution: 2dppx)  and (min-width: 320px) 
 		background:url('images/homepage/events-05x.jpg') no-repeat center center;
 		background-size:cover;
 	}
+	/* Rollover */
+	.menu-image-link-container{
+		width:210px;
+		height:124px;
+		display:block;
+		margin-left:auto;
+		margin-right:auto;
+		margin-top:.5em;
+	}
 
 }
 
@@ -1159,6 +1186,9 @@ only screen and (                min-resolution: 2dppx)  and (min-width: 320px) 
 	div#sticky_navigation{
 		background:url('images/kinfolk-home-05x.jpg') no-repeat center bottom;
 		background-size:cover;
+	}
+	.page-template-template-home-page-php #branding{
+		min-height:225px;
 	}
 	/* Homepage images */
 	.outer-hp{
@@ -1184,6 +1214,13 @@ only screen and (                min-resolution: 2dppx)  and (min-width: 320px) 
 		background:url('images/homepage/events-05x.jpg') no-repeat center center;
 		background-size:cover;
 	}
+	/* Rollover */
+	.menu-image-link-container{
+		width:320px;
+		height:210px;
+		display:inline-flex;
+		margin:.5em .5em 0 0;
+	}
 	
 }
 
@@ -1201,6 +1238,9 @@ only screen and (                min-resolution: 2dppx)  and (min-width: 768px) 
 	div#sticky_navigation{
 		background:url('images/kinfolk-home-1x.jpg') no-repeat center bottom;
 		background-size:cover;
+	}
+	.page-template-template-home-page-php #branding{
+		min-height:225px;
 	}
 	/* Homepage images */
 	.outer-hp{
@@ -1226,12 +1266,24 @@ only screen and (                min-resolution: 2dppx)  and (min-width: 768px) 
 		background:url('images/homepage/events-1x.jpg') no-repeat center center;
 		background-size:cover;
 	}
+	/* Rollover */
+	.menu-image-link-container{
+		width:320px;
+		height:210px;
+		display:inline-flex;
+		margin:.5em .5em 0 0;
+	}
 	
 }
 
 @media only screen and (min-width: 1300px) {
 
   /* Large screen, non-retina */
+  
+  	/* Paperboard */
+	.dropdownwrap, .page-template-template-home-page-php, .teaser-page-list, footer#colophon {
+		background:#f0e9e1 url('images/paperboard.png');
+	}
 	
 	/* Header */
 	div#sticky_navigation{
@@ -1278,7 +1330,6 @@ only screen and (                min-resolution: 2dppx)  and (min-width: 1300px)
 	/* Paperboard */
 	.dropdownwrap, .page-template-template-home-page-php, .teaser-page-list, footer#colophon {
 		background:#f0e9e1 url('images/paperboard-2x.png');
-		background-size: 25% 25%;
 	}
   
 	/* Header */
