@@ -687,7 +687,6 @@ input.vfb-text:focus,input[type="text"].vfb-text:focus,input[type="tel"].vfb-tex
 	text-align:center;
 }
 footer#colophon {
-	background:0;
 	padding-top:0
 }
 #footer-widget-area, #colophon{
@@ -1015,6 +1014,8 @@ div.ai1ec-calendar-toolbar{
 
 /* Catering / menu images / rollover */
 .menu-image-link-container{
+	width:210px;
+	height:124px;
 	padding:20px;
 	opacity:1;
 	/*CSS3 Transition*/
@@ -1056,6 +1057,7 @@ div.ai1ec-calendar-toolbar{
 }
 .menu-image-link p.download-named{
 	font-size:2.25em;
+	margin-bottom:1em;
 	font-weight:700;
 	position: relative;
     top: 50%; 
@@ -1086,6 +1088,11 @@ div.ai1ec-calendar-toolbar{
 
   /* Small screen, non-retina */
   
+  	/* Paperboard */
+	.dropdownwrap, .page-template-template-home-page-php, .teaser-page-list, footer#colophon {
+		background:#f0e9e1 url('images/paperboard.png');
+	}
+	
 	/* Header */
 	div#sticky_navigation{
 		background:url('images/kinfolk-home-025x.jpg') no-repeat center bottom;
@@ -1094,6 +1101,10 @@ div.ai1ec-calendar-toolbar{
 	/* Homepage images */
 	.outer-hp{
 		height:200px; /* 282 */
+	}
+	.inner-hp{
+		top:10%;
+		transform: translateY(-10%);
 	}
 	#our-food{
 		background:url('images/homepage/food-025x.jpg') no-repeat center center;
@@ -1117,8 +1128,6 @@ div.ai1ec-calendar-toolbar{
 	}
 	/* Rollover */
 	.menu-image-link-container{
-		width:210px;
-		height:124px;
 		display:block;
 		margin-left:auto;
 		margin-right:auto;
@@ -1137,6 +1146,11 @@ only screen and (                min-resolution: 2dppx)  and (min-width: 320px) 
 
   /* Small screen, retina, stuff to override above media query */
   
+  	/* Paperboard */
+	.dropdownwrap, .page-template-template-home-page-php, .teaser-page-list, footer#colophon {
+		background:#f0e9e1 url('images/paperboard.png');
+	}
+	
 	/* Header */
 	div#sticky_navigation{
 		background:url('images/kinfolk-home-05x.jpg') no-repeat center bottom;
@@ -1145,6 +1159,10 @@ only screen and (                min-resolution: 2dppx)  and (min-width: 320px) 
 	/* Homepage images */
 	.outer-hp{
 		height:200px; /* 282 */
+	}
+	.inner-hp{
+		top:10%;
+		transform: translateY(-10%);
 	}
 	#our-food{
 		background:url('images/homepage/food-05x.jpg') no-repeat center center;
@@ -1168,8 +1186,6 @@ only screen and (                min-resolution: 2dppx)  and (min-width: 320px) 
 	}
 	/* Rollover */
 	.menu-image-link-container{
-		width:210px;
-		height:124px;
 		display:block;
 		margin-left:auto;
 		margin-right:auto;
@@ -1182,6 +1198,11 @@ only screen and (                min-resolution: 2dppx)  and (min-width: 320px) 
 
   /* Medium screen, non-retina */  
 
+  	/* Paperboard */
+	.dropdownwrap, .page-template-template-home-page-php, .teaser-page-list, footer#colophon {
+		background:#f0e9e1 url('images/paperboard.png');
+	}
+	
 	/* Header */
 	div#sticky_navigation{
 		background:url('images/kinfolk-home-05x.jpg') no-repeat center bottom;
@@ -1216,10 +1237,8 @@ only screen and (                min-resolution: 2dppx)  and (min-width: 320px) 
 	}
 	/* Rollover */
 	.menu-image-link-container{
-		width:320px;
-		height:210px;
 		display:inline-flex;
-		margin:.5em .5em 0 0;
+		margin:.5em 0 0 12px;
 	}
 	
 }
@@ -1234,6 +1253,11 @@ only screen and (                min-resolution: 2dppx)  and (min-width: 768px) 
 
   /* Medium screen, retina, stuff to override above media query */
 
+  	/* Paperboard */
+	.dropdownwrap, .page-template-template-home-page-php, .teaser-page-list, footer#colophon {
+		background:#f0e9e1 url('images/paperboard.png');
+	}
+	
 	/* Header */
 	div#sticky_navigation{
 		background:url('images/kinfolk-home-1x.jpg') no-repeat center bottom;
@@ -1268,10 +1292,8 @@ only screen and (                min-resolution: 2dppx)  and (min-width: 768px) 
 	}
 	/* Rollover */
 	.menu-image-link-container{
-		width:320px;
-		height:210px;
 		display:inline-flex;
-		margin:.5em .5em 0 0;
+		margin:.5em 0 0 12px;
 	}
 	
 }
