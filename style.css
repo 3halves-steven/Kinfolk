@@ -1215,6 +1215,10 @@ only screen and (                min-resolution: 2dppx)  and (min-width: 320px) 
 	.outer-hp{
 		height:453px;
 	}
+	.inner-hp{
+		top:50%;
+		transform: translateY(-50%);
+	}
 	#our-food{
 		background:url('images/homepage/food-05x.jpg') no-repeat center center;
 		background-size:cover;
@@ -1270,6 +1274,10 @@ only screen and (                min-resolution: 2dppx)  and (min-width: 768px) 
 	.outer-hp{
 		height:453px;
 	}
+	.inner-hp{
+		top:50%;
+		transform: translateY(-50%);
+	}
 	#our-food{
 		background:url('images/homepage/food-1x.jpg') no-repeat center center;
 		background-size:cover;
@@ -1315,6 +1323,10 @@ only screen and (                min-resolution: 2dppx)  and (min-width: 768px) 
 	/* Homepage images */
 	.outer-hp{
 		height:485px;
+	}
+	.inner-hp{
+		top:50%;
+		transform: translateY(-50%);
 	}
 	#our-food{
 		background:url('images/homepage/food-1x.jpg') no-repeat center center;
@@ -1362,6 +1374,10 @@ only screen and (                min-resolution: 2dppx)  and (min-width: 1300px)
 	/* Homepage images */
 	.outer-hp{
 		height:485px;
+	}
+	.inner-hp{
+		top:50%;
+		transform: translateY(-50%);
 	}
 	#our-food{
 		background:url('images/homepage/food-2x.jpg') no-repeat center center;
